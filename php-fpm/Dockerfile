@@ -20,7 +20,10 @@ RUN apk add --update \
     php5-zlib \
     php5-ctype \
     php5-dom \
-    php5-posix
+    php5-posix \
+    php5-phar
+    
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer 
 
 RUN rm -rf /var/cache/apk/* && rm -rf /tmp/*
 
